@@ -23,19 +23,8 @@ define([
 			});
 		},
 
-		'string argument': function () {
-			return main('tests/unit/support/coverage.json', {
-				'json': 'tmp/main-string.json'
-			}).then(function () {
-				var json = JSON.parse(fs.readFileSync('tmp/main-string.json', { encoding: 'utf8' }));
-				assert(json, 'should have returned content');
-				assert(json['tests/unit/support/basic.ts'],
-					'should have key named after mapped file');
-			});
-		},
-
 		'inline sources': function () {
-			return main('tests/unit/support/coverage-inlinesource.json', {
+			return main(['tests/unit/support/coverage-inlinesource.json'], {
 				'html': 'tmp/html-report-main'
 			}).then(function () {
 				assert.isTrue(fs.existsSync('tmp/html-report-main/__root__/inlinesource.ts.html'));

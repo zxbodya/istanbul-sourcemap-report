@@ -25,7 +25,6 @@
   },
   "license": "BSD-3-Clause",
   "main": "main.js",
-  "bin": "./bin/remap-istanbul",
   "repository": {
     "type": "git",
     "url": "https://github.com/SitePen/remap-istanbul.git"
@@ -35,11 +34,11 @@
     "test": "tests/run.sh"
   },
   "dependencies": {
-    "amdefine": "1.0.0",
     "istanbul": "^0.4.3",
     "source-map": ">=0.5.6"
   },
   "devDependencies": {
+    "amdefine": "1.0.0",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.7.0",

@@ -1,6 +1,7 @@
 define([
-	'./main',
-	'./lib/loadCoverage',
-	'./lib/remap',
-	'./lib/writeReport'
-], function () {});
+  './main',
+  './lib/loadCoverage',
+  './lib/remap',
+  './lib/writeReport'
+], function () {
+});

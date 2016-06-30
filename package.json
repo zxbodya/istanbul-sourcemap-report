@@ -24,7 +24,7 @@
     "url": "https://github.com/SitePen/remap-istanbul"
   },
   "license": "BSD-3-Clause",
-  "main": "main.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/SitePen/remap-istanbul.git"

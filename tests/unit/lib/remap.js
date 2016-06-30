@@ -2,11 +2,12 @@ define([
   'intern!object',
   'intern/chai!assert',
   'intern/dojo/node!path',
+  '../../node!fs',
   '../../node!istanbul/lib/collector',
   '../../node!istanbul/lib/store/memory',
-  '../../node!../../../lib/loadCoverage',
   '../../node!../../../lib/remap'
-], function (registerSuite, assert, path, Collector, MemoryStore, loadCoverage, remap) {
+], function (registerSuite, assert, path, fs, Collector, MemoryStore, remap) {
+  const loadCoverage = filePath => JSON.parse(fs.readFileSync(filePath));
   registerSuite({
     name: 'remap-istanbul/lib/remap',
 

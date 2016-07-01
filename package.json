@@ -23,6 +23,7 @@
   },
   "license": "BSD-3-Clause",
   "main": "./lib/index.js",
+  "jsnext:main": "./src/index.js",
   "bin": {
     "istanbul-sourcemap-report": "./lib/cli.js"
   },
@@ -33,14 +34,23 @@
   "scripts": {
     "lint": "eslint ./lib/",
     "test": "rimraf tmp && mkdirp tmp && ./node_modules/jasmine/bin/jasmine.js",
-    "cover": "rimraf coverage && rimraf tmp && mkdirp tmp  && istanbul cover -x \"*.test.js\" ./node_modules/jasmine/bin/jasmine.js"
+    "cover": "rimraf coverage && rimraf tmp && mkdirp tmp  && istanbul cover -x \"*.test.js\" ./node_modules/jasmine/bin/jasmine.js && npm run cover_remapping",
+    "cover_remapping": "node ./lib/cli.js ./coverage/coverage.json --json.file=./coverage/coverage-remapped.json --html.dir=./coverage/coverage-remapped",
+    "build": "rimraf lib && babel --presets es2015 --plugins transform-runtime src --out-dir lib --source-maps",
+    "watch": "rimraf lib && babel --presets es2015 --plugins transform-runtime src --watch --out-dir lib --source-maps",
+    "prepublish": "npm run build"
   },
   "dependencies": {
+    "babel-runtime": "^6.3.19",
     "istanbul": "^0.4.4",
     "minimatch": "^3.0.2",
     "source-map": ">=0.5.6"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
     "codecov.io": "0.1.6",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^9.0.1",

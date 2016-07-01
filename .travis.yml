@@ -1,6 +1,7 @@
 language: node_js
 sudo: false
 node_js:
+  - 4
   - 6
 
 cache:
@@ -14,4 +15,4 @@ script:
   - npm run lint && npm test && npm run cover
 
 after_success:
-  - cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/coverage-remapped.json | ./node_modules/codecov.io/bin/codecov.io.js

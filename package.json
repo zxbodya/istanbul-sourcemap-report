@@ -32,7 +32,7 @@
     "url": "https://github.com/zxbodya/istanbul-sourcemap-report.git"
   },
   "scripts": {
-    "lint": "eslint ./lib/",
+    "lint": "eslint ./src/",
     "test": "rimraf tmp && mkdirp tmp && ./node_modules/jasmine/bin/jasmine.js",
     "cover": "rimraf coverage && rimraf tmp && mkdirp tmp  && istanbul cover -x \"*.test.js\" ./node_modules/jasmine/bin/jasmine.js && npm run cover_remapping",
     "cover_remapping": "node ./lib/cli.js ./coverage/coverage.json --json.file=./coverage/coverage-remapped.json --html.dir=./coverage/coverage-remapped",
@@ -60,6 +60,7 @@
     "istanbul": "^0.4.4",
     "jasmine": "^2.4.1",
     "jasmine-core": "^2.4.1",
+    "rimraf": "^2.4.4",
     "mkdirp": "^0.5.1"
   }
 }

@@ -1,6 +1,6 @@
 {
-    "tests/unit/support/basic.js": {
-        "path": "tests/unit/support/basic.js",
+    "spec/fixtures/basic.js": {
+        "path": "spec/fixtures/basic.js",
         "s": {
             "1": 1,
             "2": 1,

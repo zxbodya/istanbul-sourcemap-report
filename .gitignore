@@ -1,4 +1,4 @@
 .idea
-html-report
+coverage
 node_modules
 tmp

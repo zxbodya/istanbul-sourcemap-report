@@ -24,8 +24,7 @@ remap([
   html: { dir: './coverage/coverage-remapped' },
 }, {
   // remapping options
-  //    exclude?  - a string or Regular Expression that filters out
-  //                any coverage where the file path matches
+  //    exclude?  - glob expression using minimatch
   //    readFile? - a function that can read a file
   //                syncronously
   //    readJSON? - a function that can read and parse a

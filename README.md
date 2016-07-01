@@ -1,5 +1,7 @@
 # Istanbul coverage report source mapping utility
 
+[![Build Status](https://travis-ci.org/zxbodya/istanbul-sourcemap-report.svg?branch=master)](https://travis-ci.org/zxbodya/istanbul-sourcemap-report)
+
 Utility to generate coverage reports for sources from compiled code coverage using SourceMaps.
 
 Opinionated fork from `remap-istanbul`(https://github.com/SitePen/remap-istanbul). 

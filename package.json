@@ -35,8 +35,8 @@
     "lint": "eslint ./src/",
     "test": "rimraf tmp && mkdirp tmp && jest",
     "cover": "rimraf coverage && rimraf tmp && mkdirp tmp  && jest --coverage",
-    "build": "rimraf lib && babel --presets es2015 --plugins transform-runtime src --out-dir lib --source-maps",
-    "watch": "rimraf lib && babel --presets es2015 --plugins transform-runtime src --watch --out-dir lib --source-maps",
+    "build": "rimraf lib && babel src --out-dir lib --source-maps",
+    "watch": "rimraf lib && babel src --watch --out-dir lib --source-maps",
     "prepublish": "npm run build"
   },
   "dependencies": {
